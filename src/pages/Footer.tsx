@@ -14,8 +14,8 @@ export default function Footer() {
                     <p className="text-lg text-base text-gray-400 mt-1">Your beauty, our passion.</p>
                 <div className="mt-3">
                     <span className="block text-lg font-semibold text-gray-400">Email</span>
-                    <a href="mailto:info@marlanssalon.com" className="text-yellow-400 text-md hover:underline">
-                      info@marlanssalon.com
+                    <a href="mailto:marlansunisexbeautysalon@gmail.com" className="text-yellow-400 text-md hover:underline">
+                      marlansunisexbeautysalon@gmail.com
                     </a>
                     <span className="block text-lg font-semibold mt-2 text-gray-400">Phone</span>
                     <span className="text-md text-yellow-400">+256 757767715 </span>
