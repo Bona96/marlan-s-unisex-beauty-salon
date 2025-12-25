@@ -17,7 +17,7 @@ declare global {
     }
 }
 
-const VantaHero: React.FC<VantaProps> = (props) => {
+const VantaHero: React.FC<VantaProps> = () => {
     // 1. Create a ref to attach to the target DOM element
     const vantaRef = useRef<HTMLDivElement | null>(null);
     // 2. Create a ref to store the Vanta instance for cleanup

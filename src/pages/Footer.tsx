@@ -1,5 +1,4 @@
 
-import { motion } from 'framer-motion';
 import MarlanLogo from '../assets/images/marlan-unisex-beauty-salon-logo-white-bg.jpeg';
 export default function Footer() {
   return (
