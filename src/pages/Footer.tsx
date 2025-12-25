@@ -11,36 +11,39 @@ export default function Footer() {
             </div>
             <div>
                 <h2 className="text-2xl font-bold text-white">Marlan's Unisex Beauty Salon</h2>
-                    <p className="text-base text-gray-400 mt-1">Your beauty, our passion.</p>
+                    <p className="text-lg text-base text-gray-400 mt-1">Your beauty, our passion.</p>
                 <div className="mt-3">
-                    <span className="block text-xs font-semibold text-gray-400">Email</span>
-                    <a href="mailto:info@marlanssalon.com" className="text-cyan-400 text-sm hover:underline">info@marlanssalon.com</a>
-                    <span className="block text-xs font-semibold mt-2 text-gray-400">Phone</span>
-                    <span className="text-sm text-cyan-400">+256 </span>
+                    <span className="block text-lg font-semibold text-gray-400">Email</span>
+                    <a href="mailto:info@marlanssalon.com" className="text-yellow-400 text-md hover:underline">
+                      info@marlanssalon.com
+                    </a>
+                    <span className="block text-lg font-semibold mt-2 text-gray-400">Phone</span>
+                    <span className="text-md text-yellow-400">+256 757767715 </span>
+                    <span className="text-md text-yellow-400">+256 779290288 </span>
                 </div>
             </div>
         </div>
         {/* Delivery Info */}
         <div className="text-center md:text-left">
           <span className="block text-lg font-semibold text-gray-100 mb-2">From 09:00am - 08:00pm</span>
-          <span className="block text-3xl font-bold text-white mb-2">You can book your session now!</span>
-          <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg transition flex items-center justify-center gap-2">
+          <span className="block text-xl font-bold text-white mb-2">You can book your session now!</span>
+          <button className="bg-gradient-to-r from-black via-yellow-500 to-cyan-900 hover:bg-cyan-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg transition flex items-center justify-center gap-2 font-bold text-lg">
             Book now <span className="ml-2">→</span>
           </button>
         </div>
         {/* Subscribe */}
         <div className="text-center md:text-left">
-          <span className="block text-lg font-semibold text-gray-100 mb-2">Subscribe</span>
-          <span className="block text-sm mb-2 text-gray-400">Get specials and updates straight to your inbox.</span>
+          <span className="block text-xl font-semibold text-gray-100 mb-2">Subscribe</span>
+          <span className="block text-md mb-2 text-gray-400">Get specials and updates straight to your inbox.</span>
           <form className="flex gap-2 mt-2">
-            <input type="email" placeholder="Email address" className="px-4 py-2 rounded-lg bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 w-48" />
+            <input type="email" placeholder="Email address" className="px-4 py-2 rounded-lg bg-gray-800 text-gray-200 focus:outline-none focus:ring-2 focus:ring-yellow-500 w-48" />
             <button type="submit" className="bg-red-700 hover:bg-red-800 text-white px-5 py-2 rounded-lg font-semibold shadow-md transition">Subscribe</button>
           </form>
         </div>
       </div>
       <div className="border-t border-gray-800 mt-10 pt-5 flex flex-col md:flex-row justify-between items-center">
-        <span className="text-xs text-gray-400">© {new Date().getFullYear()} Marlan's Unisex Beauty Salon</span>
-        <span className="text-xs mt-2 md:mt-0 flex items-center gap-2">
+        <span className="text-md text-yellow-400">© {new Date().getFullYear()} Marlan's Unisex Beauty Salon</span>
+        <span className="text-md mt-2 md:mt-0 flex items-center gap-2">
           Powered by
           <a
             href="https://knihtdigitalsolutions.vercel.app"
