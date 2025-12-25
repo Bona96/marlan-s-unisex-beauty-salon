@@ -38,6 +38,9 @@ const VantaHero: React.FC<VantaProps> = () => {
                     minWidth: 200.0,
                     scale: 1.0,
                     scaleMobile: 1.0,
+                    backgroundColor: 0x000000,
+                    color1: 0x380000,
+                    color2: 0xffa500,
                     // Add any custom colors or settings here
                     // color: 0xcccccc
                 });
@@ -61,9 +64,9 @@ const VantaHero: React.FC<VantaProps> = () => {
         <div
             ref={vantaRef}
             style={{ width: "100%", height: "500px" }} // Give the container a size!
-            className="relative flex flex-col items-center justify-center min-h-screen w-full overflow-hidden"
+            className="relative bg-black flex flex-col items-center justify-center min-h-screen w-full overflow-hidden"
         >
-            {/* Your hero content goes here */}
+            {/* Your content goes here */}
             <AboutUs />
         </div>
     );
