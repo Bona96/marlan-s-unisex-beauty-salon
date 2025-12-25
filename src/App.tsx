@@ -1,7 +1,6 @@
 import Navbar from './pages/Navbar';
 import HomeSlider from './pages/HomeSlider';
 import Services from './pages/Services';
-import AboutUs from './pages/AboutUs';
 import Gallery3D from './pages/Gallery3D';
 import Contact from './pages/Contact';
 import Footer from './pages/Footer';

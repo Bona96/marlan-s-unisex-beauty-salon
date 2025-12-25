@@ -22,6 +22,8 @@ function GalleryFrame({ url, position, index }: { url: string; position: [number
       texture.minFilter = THREE.LinearFilter;
       texture.magFilter = THREE.LinearFilter;
       texture.needsUpdate = true;
+    }else {
+      setError(true);
     }
   }, [texture, gl]);
   // Animate floating and rotation
