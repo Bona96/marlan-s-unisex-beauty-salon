@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* Custom gold color for Tailwind (if not in config) */
+:root {
+	--color-gold: #FFD700;
+}
+
+body {
+	background: #000;
+	color: #FFD700;
+	font-family: 'Inter', 'sans-serif';
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background: #000;
+		color: #FFD700;
+	}
+}
