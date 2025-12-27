@@ -1,4 +1,4 @@
-import Navbar from './pages/Navbar';
+import Navbar from './components/Navbar';
 import HomeSlider from './pages/HomeSlider';
 import Services from './pages/Services';
 import Gallery3D from './pages/Gallery3D';
