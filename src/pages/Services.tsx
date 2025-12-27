@@ -1,6 +1,6 @@
-import { motion, useAnimation, easeInOut } from 'framer-motion';
+import { motion, easeInOut } from 'framer-motion';
 import { Scissors, Bubbles, Brush, User } from 'lucide-react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { ReactNode } from 'react';
 
 const services: ServiceType[] = [
