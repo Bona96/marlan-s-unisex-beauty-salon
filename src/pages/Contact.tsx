@@ -44,7 +44,16 @@ export default function Contact() {
   }, 5000);
   return (
     <section id="contact" className="min-h-screen py-16 px-2 md:px-8 bg-linear-to-t from-black to-yellow-900 dark:from-black dark:to-yellow-900 flex flex-col items-center">
-      <motion.h2 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-4xl font-bold text-yellow-400 mb-8 text-center">Contact Us</motion.h2>
+      <motion.h2 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-4xl font-bold text-yellow-400 mb-8 text-center">
+        Contact Us
+      </motion.h2>
+      <motion.h5 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-lg font-semibold text-yellow-300 mb-2 text-center">
+        Beauty is in the hands of the beholder, but a great salon helps!
+      </motion.h5>
+      <motion.h5 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-lg font-semibold text-yellow-300 mb-8 text-center">
+        Reach out to Marlan's Unisex Beauty Salon for appointments, inquiries, or just to say hello. <br />
+        We're here to make you look and feel your best!
+      </motion.h5>
       <motion.form 
         initial={{ opacity: 0, y: 40 }} 
         whileInView={{ opacity: 1, y: 0 }} 

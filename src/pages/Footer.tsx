@@ -1,17 +1,17 @@
-
 import MarlanLogo from '../assets/images/marlan-unisex-beauty-salon-logo-white-bg.jpeg';
+
 export default function Footer() {
   return (
-    <footer className="w-full bg-gradient-to-br from-black via-yellow-800 to-black text-gray-300 py-10 px-4 mt-16 shadow-2xl border-t border-yellow-400/20">
+    <footer className="w-full bg-linear-to-br from-black via-yellow-800 to-black text-gray-300 py-10 px-4 mt-16 shadow-2xl border-t border-yellow-400/20">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
         {/* Brand & Contact */}
         <div className="flex items-center gap-5">
-            <div className="bg-gradient-to-br from-black to-yellow-500 rounded-2xl flex items-center justify-center text-3xl font-bold text-white shadow-xl">
+            <div className="bg-linear-to-br from-black to-yellow-500 rounded-2xl flex items-center justify-center text-3xl font-bold text-white shadow-xl">
                 <img src={MarlanLogo} alt="Marlan's Unisex Beauty Salon Logo" className="w-20 h-20 ml-2 inline-block" />
             </div>
             <div>
                 <h2 className="text-2xl font-bold text-white">Marlan's Unisex Beauty Salon</h2>
-                    <p className="text-lg text-base text-gray-400 mt-1">Your beauty, our passion.</p>
+                    <p className="text-lg text-gray-400 mt-1">Your beauty, our passion.</p>
                 <div className="mt-3">
                     <span className="block text-lg font-semibold text-gray-400">Email</span>
                     <a href="mailto:marlansunisexbeautysalon@gmail.com" className="text-yellow-400 text-md hover:underline">
@@ -27,7 +27,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <span className="block text-lg font-semibold text-gray-100 mb-2">From 09:00am - 08:00pm</span>
           <span className="block text-xl font-bold text-white mb-2">You can book your session now!</span>
-          <button className="bg-gradient-to-r from-black via-yellow-500 to-cyan-900 hover:bg-cyan-700 text-white px-8 py-3 rounded-xl font-semibold shadow-lg transition flex items-center justify-center gap-2 font-bold text-lg">
+          <button className="bg-linear-to-r from-black via-yellow-500 to-cyan-900 hover:bg-cyan-700 text-white px-8 py-3 rounded-xl font-bold shadow-lg transition flex items-center justify-center gap-2 text-lg">
             Book now <span className="ml-2">→</span>
           </button>
         </div>
