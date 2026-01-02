@@ -15,7 +15,7 @@ const layoutOptions = [
 ];
 
 export default function GalleryLayoutSelector({ images }: GallerySliderProps) {
-  const [layout, setLayout] = useState('ring');
+  const [layout, setLayout] = useState('grid');
 
   return (
     <div className="w-full max-w-6xl flex flex-col items-center">
