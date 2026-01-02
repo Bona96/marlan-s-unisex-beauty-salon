@@ -1,5 +1,5 @@
-@import "tailwindcss";
-
+@import 'tailwindcss';
+@plugin 'lightswind/plugin';
 /* Custom gold color for Tailwind (if not in config) */
 :root {
 	--color-gold: #FFD700;
