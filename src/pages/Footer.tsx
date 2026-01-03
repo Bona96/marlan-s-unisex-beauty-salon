@@ -1,3 +1,4 @@
+import { Mail, MapPin, Phone } from 'lucide-react';
 import MarlanLogo from '../assets/images/marlan-unisex-beauty-salon-logo-white-bg.jpeg';
 
 export default function Footer() {
@@ -13,13 +14,22 @@ export default function Footer() {
                 <h2 className="text-2xl font-bold text-white">Marlan's Unisex Beauty Salon</h2>
                     <p className="text-lg text-gray-400 mt-1">Your beauty, our passion.</p>
                 <div className="mt-3">
-                    <span className="block text-lg font-semibold text-gray-400">Email</span>
-                    <a href="mailto:marlansunisexbeautysalon@gmail.com" className="text-yellow-400 text-md hover:underline">
-                      marlansunisexbeautysalon@gmail.com
-                    </a>
-                    <span className="block text-lg font-semibold mt-2 text-gray-400">Phone</span>
-                    <span className="text-md text-yellow-400">+256 757767715 </span>
-                    <span className="text-md text-yellow-400">+256 779290288 </span>
+                    <div className='mt-5'>
+                      <Mail className="inline-block mr-2 text-yellow-400" size={24} />
+                      <a href="mailto:marlansunisexbeautysalon@gmail.com" className="text-yellow-400 text-md hover:underline">
+                        marlansunisexbeautysalon@gmail.com
+                      </a>
+                    </div>
+                    <div className='mt-5'>
+                      <Phone className="inline-block mr-2 text-yellow-400" size={24} />
+                      <span className="text-md text-yellow-400">+256 757767715 |</span>
+                      <span className="text-md text-yellow-400"> +256 779290288 </span>
+                    </div>
+                    <div className='mt-5'>
+                      <MapPin className="inline-block mr-2 text-yellow-400" size={24} />
+                      <span className="text-md text-yellow-400">Najita Plaza | Opposite Torch Petro Station | </span>
+                      <span className="text-md text-yellow-400">Kigogwa Bombo Road</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -27,7 +37,7 @@ export default function Footer() {
         <div className="text-center md:text-left">
           <span className="block text-lg font-semibold text-gray-100 mb-2">From 09:00am - 08:00pm</span>
           <span className="block text-xl font-bold text-white mb-2">You can book your session now!</span>
-          <button className="bg-linear-to-r from-black via-yellow-500 to-cyan-900 hover:bg-cyan-700 text-white px-8 py-3 rounded-xl font-bold shadow-lg transition flex items-center justify-center gap-2 text-lg">
+          <button className="bg-linear-to-r from-black/50 via-yellow-500/50 to-black/50 hover:bg-cyan-500/50 text-white px-4 py-2 rounded-xl font-bold shadow-lg transition flex items-center justify-center gap-2 text-lg">
             Book now <span className="ml-2">→</span>
           </button>
         </div>
@@ -49,7 +59,7 @@ export default function Footer() {
             href="https://knihtdigitalsolutions.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-linear-to-r from-cyan-500/20 via-yellow-500/50 to-cyan-500/20 hover:bg-cyan-800 text-white px-4 py-2 rounded-lg font-semibold transition shadow-md"
+            className="bg-linear-to-r from-cyan-500/20 via-yellow-500/50 to-cyan-500/20 hover:bg-cyan-500/50 text-white px-4 py-2 rounded-lg font-semibold transition shadow-md"
           >
             KNiHT Digital Solutions
           </a>

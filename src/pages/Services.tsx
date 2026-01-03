@@ -11,14 +11,14 @@ export default function Services() {
 	return (
 		<section
 			id="services"
-			className="h-screen relative p-20 px-2 md:p-8 bg-linear-to-b from-black/50 to-yellow-900/50 flex flex-col items-center"
+			className="relative p-20 px-2 md:p-8 bg-linear-to-b from-black/50 to-yellow-900/50 flex flex-col items-center"
 		>
 			<motion.h2
 				initial={{ opacity: 0, y: 40 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.7 }}
-				className="mt-20 text-4xl font-bold text-yellow-400 mb-20 text-center"
+				className="mt-20 z-10 text-4xl font-bold text-yellow-400 mb-20 text-center p-5 bg-black/70 rounded-2xl"
 			>
 				Our Services
 			</motion.h2>
@@ -32,7 +32,7 @@ export default function Services() {
 				{services.map((service, i) => (
 					<motion.div
 						key={service.title || i}
-						className="bg-black/50 dark:bg-black/50 rounded-2xl p-6 flex flex-col items-center shadow-xl border border-yellow-400/30 cursor-pointer"
+						className="bg-black/70 rounded-2xl p-6 flex flex-col items-center shadow-xl border border-yellow-400/30 cursor-pointer"
 						variants={cardVariants}
 						whileHover={{
 							scale: 1.08,
@@ -52,8 +52,8 @@ export default function Services() {
 					</motion.div>
 				))}
 			</motion.div>
-			<div className="absolute inset-0 z-0 pointer-events-none">
-				<Canvas camera={{ position: [2, 4, 6], fov: 60 }}>
+			<div className="absolute inset-0 z-0 pointer-events-none mt-5">
+				<Canvas camera={{ position: [0, 0, 6], fov: 60 }}>
 					<ambientLight intensity={0.7} />
 					<directionalLight position={[5, 5, 5]} intensity={1.2} />
 					<Environment preset="sunset" />
