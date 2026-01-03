@@ -6,7 +6,7 @@ export type ServiceType = {
     desc: string;
     details: string;
 };
-<<<<<<< HEAD
+
 export type HeroVideoSliderProps = {
   videos: string[]
   interval?: number
@@ -15,11 +15,6 @@ export type HeroVideoSliderProps = {
 export type VideoSliderProps = {
   videos: string[];
   isFirstPart?: boolean;
-=======
-
-export type VideoSliderProps = {
-  videos: string[];
->>>>>>> 26691f90b02f8637c8f1d630af190497a885a961
 };
 
 // Define an interface for the component's props to ensure type safety
