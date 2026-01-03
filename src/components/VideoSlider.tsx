@@ -1,23 +1,9 @@
 // Single video slider component
 import React from 'react';
 import { motion } from 'framer-motion';
+import type { VideoPlayerProps, VideoSliderProps } from '../lib/types';
 
-type VideoSliderProps = {
-  videos: string[];
-};
-// Define an interface for the component's props to ensure type safety
-interface VideoPlayerProps {
-  src: string;
-  poster?: string; // Optional poster image URL
-  controls?: boolean; // Optional controls visibility, default to true
-  autoPlay?: boolean; // Optional autoplay behavior, default to false
-  loop?: boolean; // Optional loop behavior, default to false
-  muted?: boolean; // Optional muted behavior, default to false
-  width?: string | number; // Optional width
-  height?: string | number; // Optional height
-  className?: string; // Optional additional CSS classes
-  style?: React.CSSProperties; // Optional inline styles
-}
+
 // Multiple video slider component
 export const VideoSlider = ({ videos }: VideoSliderProps) => {
 //   const sliderRef = useRef(null);
@@ -52,25 +38,26 @@ export const SingleVideoPlayer: React.FC<VideoPlayerProps> = ({
   src,
   poster,
   controls = true, // Default values can be set in destructuring
-  autoPlay = false,
+  autoPlay = true,
   loop = false,
   muted = false,
-  className,
   style,
 }) => {
   return (
-    <video
-      src={src}
-      poster={poster}
-      controls={controls}
-      autoPlay={autoPlay}
-      loop={loop}
-      muted={muted}
-      className={className}
-      style={style}
-      // You can add other HTML video attributes here
-    >
-      Your browser does not support the video tag.
-    </video>
+    <section className="h-125 flex items-center justify-center w-full overflow-hidden">
+      <video
+        src={src}
+        poster={poster}
+        controls={controls}
+        autoPlay={autoPlay}
+        loop={loop}
+        muted={muted}
+        className="w-full h-full object-contain rounded-2xl"
+        style={style}
+        // You can add other HTML video attributes here
+      >
+        Your browser does not support the video tag.
+      </video>
+    </section>
   );
 };

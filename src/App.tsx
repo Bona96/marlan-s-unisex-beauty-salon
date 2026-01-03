@@ -1,23 +1,22 @@
 import Navbar from './components/Navbar';
-import HomeSlider from './pages/HomeSlider';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
-import { VantaCloudsHero, VantaBirdsHero } from './components/VantaHero';
+import { VantaCloudsHero, VantaBirdsHero, VantaDotsHero } from './components/VantaHero';
 
 const App = () => {
   return (
-    <div className="bg-black min-h-screen font-sans">
+    <main className="bg-black h-screen font-sans">
       <Navbar />
-      <main>
-        <HomeSlider />
+      <VantaDotsHero />
+      <section className="flex flex-col gap-20 mt-20">
         <Services />
         {/* for about us */}
         <VantaBirdsHero />
         <Gallery />
         {/* for contact */}
         <VantaCloudsHero />
-      </main>
-    </div>
+      </section>
+    </main>
   );
 };
 
