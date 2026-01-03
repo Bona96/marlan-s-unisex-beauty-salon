@@ -14,7 +14,7 @@ const GalleryLayoutSelector = ({ images }: GalleryProps) =>{
         {layoutOptions.map(opt => (
           <button
             key={opt.value}
-            className={`px-4 py-2 rounded-full font-semibold transition-colors border border-yellow-400/40 bg-black/40 text-yellow-300 hover:bg-yellow-400 hover:text-black ${layout === opt.value ? 'bg-yellow-400 text-black' : ''}`}
+            className={`px-4 py-2 rounded-full font-semibold transition-colors border border-yellow-400/40 bg-black/40 hover:bg-yellow-400 hover:text-black ${layout === opt.value ? 'bg-yellow-400 text-black' : 'text-yellow-300'}`}
             onClick={() => setLayout(opt.value)}
           >
             {opt.label}

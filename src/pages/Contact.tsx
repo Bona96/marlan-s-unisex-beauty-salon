@@ -43,7 +43,7 @@ export default function Contact() {
     }
   }, 5000);
   return (
-    <section id="contact" className="min-h-screen py-16 px-2 md:px-8 bg-transparent flex flex-col items-center">
+    <section id="contact" className="min-h-screen py-16 px-2 md:px-8 bg-transparent flex flex-col items-center snap-start">
       <motion.h2 initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.7 }} className="text-4xl font-bold text-yellow-400 mb-8 text-center">
         Contact Us
       </motion.h2>

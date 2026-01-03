@@ -19,7 +19,7 @@ import MarlanImage13 from '../assets/images/marlan-unisex-beauty-salon-image-13.
 import MarlanImage14 from '../assets/images/marlan-unisex-beauty-salon-image-14.jpeg'
 
 // Videos
-import MarlanGalleryVideoFirstSection from '../assets/videos/marlans-salon-showcase-first-section.mp4'
+// import MarlanGalleryVideoFirstSection from '../assets/videos/marlans-salon-showcase-first-section.mp4'
 import MarlanGalleryVideo1 from '../assets/videos/marlans-salon-showcase.mp4'
 import type { ServiceType } from '../lib/types'
 
@@ -64,7 +64,7 @@ export const marlanImages = {
   MarlanImage14,
 }
 export const marlanVideos = {
-  MarlanGalleryVideoFirstSection,
+//   MarlanGalleryVideoFirstSection,
   MarlanGalleryVideo1
 }
 export const Salon3DLogo = () => {

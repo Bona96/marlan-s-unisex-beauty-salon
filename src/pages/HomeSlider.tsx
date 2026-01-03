@@ -1,12 +1,14 @@
 import { motion } from 'framer-motion';
 import { marlanVideos } from '../constants/constants';
-import { SingleVideoPlayer } from '../components/VideoSlider';
+import HeroVideoSlider from '../components/HeroVideoSlider';
+
 
 export default function HomeSlider() {
+  const videos = Object.values(marlanVideos || {});
   return (
     <section 
       id="home" 
-      className="lg:p-28 flex-1 flex-row flex-wrap gap-5"
+      className="lg:p-28 flex-1 flex-row flex-wrap gap-5 min-h-screen snap-start"
     >
       <motion.div 
         initial={{ opacity: 0, y: 60 }} 
@@ -22,14 +24,11 @@ export default function HomeSlider() {
         >
           Experience top-notch beauty services in a relaxing and friendly environment.<br></br> Your beauty is our duty!
         </p>
+        
       </motion.div>
-      <SingleVideoPlayer
-        src={marlanVideos.MarlanGalleryVideo1}
-        autoPlay={true}
-        muted={false}
-        controls={false}
-        loop={true}
-      />
+      <div className="w-full mt-12 flex justify-center">
+        <HeroVideoSlider videos={videos} interval={6000} />
+      </div>
     </section>
   );
 }

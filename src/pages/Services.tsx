@@ -11,14 +11,14 @@ export default function Services() {
 	return (
 		<section
 			id="services"
-			className="relative p-20 px-2 md:p-8 bg-linear-to-b from-black/50 to-yellow-900/50 flex flex-col items-center"
+			className="relative p-10 px-2 md:p-8 flex flex-col items-center"
 		>
 			<motion.h2
 				initial={{ opacity: 0, y: 40 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.7 }}
-				className="mt-20 z-10 text-4xl font-bold text-yellow-400 mb-20 text-center p-5 bg-black/70 rounded-2xl"
+				className="mt-10 z-10 text-4xl font-bold text-yellow-400 mb-5 text-center p-5 bg-black/70 rounded-2xl"
 			>
 				Our Services
 			</motion.h2>

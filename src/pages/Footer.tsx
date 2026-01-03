@@ -3,7 +3,7 @@ import MarlanLogo from '../assets/images/marlan-unisex-beauty-salon-logo-white-b
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-linear-to-br from-black/10 via-yellow-800/40 to-black/10 text-gray-300 py-10 px-4">
+    <footer className="w-full bg-linear-to-br from-black/10 via-yellow-800/40 to-black/10 text-gray-300 py-10 px-4 snap-start">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
         {/* Brand & Contact */}
         <div className="flex items-center gap-5">

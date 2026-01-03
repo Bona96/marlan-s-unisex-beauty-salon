@@ -9,7 +9,7 @@ const Gallery = () => {
   return (
     <section
       id="gallery"
-      className="min-h-screen py-16 px-2 md:px-8 flex flex-col items-center dark:bg-black"
+      className="min-h-screen py-16 px-2 md:px-8 flex flex-col items-center dark:bg-black snap-start"
       style={{
         background: 'radial-gradient(ellipse at top, #232526 0%, #000 100%)',
       }}
@@ -38,7 +38,7 @@ const Gallery = () => {
         >
           Hair Styles Showcase
         </motion.h3>
-        <VideoSlider videos={videos} />
+        <VideoSlider videos={videos} isFirstPart={false} />
       </div>
     </section>
   );
