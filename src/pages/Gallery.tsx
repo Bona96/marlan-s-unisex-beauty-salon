@@ -1,10 +1,7 @@
-
-
 import { motion } from 'framer-motion';
 import { marlanImages, marlanVideos } from '../constants/constants';
 import GalleryLayoutSelector from '../components/GalleryLayoutSelector';
-import VideoSlider from '../components/VideoSlider';
-
+import { VideoSlider } from '../components/VideoSlider';
 
 const Gallery = () => {
   const images = Object.values(marlanImages);

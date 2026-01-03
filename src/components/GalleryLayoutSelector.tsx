@@ -1,20 +1,11 @@
 import { useState } from 'react';
 // import GalleryRing3D from './GalleryRing3D';
-import GalleryGrid from './GalleryGrid';
-import GalleryMasonry from './GalleryMasonry';
-import GallerySlider from './GallerySlider';
+import { GalleryGrid, GalleryMasonry, GallerySlider } from './GalleryParts';
+import type { GalleryProps } from '../lib/types';
+import { layoutOptions } from '../constants/constants';
 
-type GallerySliderProps = {
-  images: string[];
-};
-const layoutOptions = [
-//   { label: '3D Ring', value: 'ring' },
-  { label: 'Grid', value: 'grid' },
-  { label: 'Masonry', value: 'masonry' },
-  { label: 'Slider', value: 'slider' },
-];
 
-export default function GalleryLayoutSelector({ images }: GallerySliderProps) {
+const GalleryLayoutSelector = ({ images }: GalleryProps) =>{
   const [layout, setLayout] = useState('grid');
 
   return (
@@ -39,3 +30,5 @@ export default function GalleryLayoutSelector({ images }: GallerySliderProps) {
     </div>
   );
 }
+
+export default GalleryLayoutSelector;

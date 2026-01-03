@@ -1,64 +1,9 @@
-import { motion, easeInOut } from 'framer-motion';
-import { Scissors, Bubbles, Brush, User } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { useState } from 'react';
-import type { ReactNode } from 'react';
-
-const services: ServiceType[] = [
-	{
-		icon: <Scissors size={40} />,
-		title: 'Hair Styling',
-		desc: 'Trendy cuts, coloring, and styling for all.',
-		details:
-			'Our expert stylists offer the latest haircuts, coloring techniques, and styling trends. Whether you want a classic look or something bold, we tailor each session to your unique style.',
-	},
-	{
-		icon: <Bubbles size={40} />,
-		title: 'Spa & Relaxation',
-		desc: 'Facials, massages, and relaxation therapies.',
-		details:
-			'Indulge in our spa treatments including deep tissue massages, rejuvenating facials, and holistic relaxation therapies designed to refresh your mind and body.',
-	},
-	{
-		icon: <Brush size={40} />,
-		title: 'Makeup',
-		desc: 'Professional makeup for every occasion.',
-		details:
-			'From weddings to parties, our makeup artists create flawless looks using premium products and techniques suited for every skin type and event.',
-	},
-	{
-		icon: <User size={40} />,
-		title: 'Grooming',
-		desc: 'Beard trims, waxing, and more.',
-		details:
-			'We offer precision beard trims, waxing, and grooming services for men and women, ensuring you look sharp and feel confident.',
-	},
-];
-
-type ServiceType = {
-	icon: ReactNode;
-	title: string;
-	desc: string;
-	details: string;
-};
-
-const containerVariants = {
-	hidden: {},
-	show: {
-		transition: {
-			staggerChildren: 0.18,
-		},
-	},
-};
-
-const cardVariants = {
-	hidden: { opacity: 0, y: 60, scale: 0.95 },
-	show: {
-		opacity: 1,
-		y: 0,
-		scale: 1,
-		transition: { duration: 0.6, ease: easeInOut },
-	},
-};
+import { Canvas } from '@react-three/fiber';
+import { OrbitControls, Environment } from '@react-three/drei';
+import { cardVariants, containerVariants, Salon3DLogo, services } from '../constants/constants';
+import type { ServiceType } from '../lib/types';
 
 export default function Services() {
 	const [selected, setSelected] = useState<ServiceType | null>(null);
@@ -66,19 +11,19 @@ export default function Services() {
 	return (
 		<section
 			id="services"
-			className="relative p-20 px-2 md:p-8 bg-linear-to-b from-black/50 to-yellow-900/50 flex flex-col items-center"
+			className="h-screen relative p-20 px-2 md:p-8 bg-linear-to-b from-black/50 to-yellow-900/50 flex flex-col items-center"
 		>
 			<motion.h2
 				initial={{ opacity: 0, y: 40 }}
 				whileInView={{ opacity: 1, y: 0 }}
 				viewport={{ once: true }}
 				transition={{ duration: 0.7 }}
-				className="text-4xl font-bold text-yellow-400 mb-8 text-center"
+				className="mt-20 text-4xl font-bold text-yellow-400 mb-20 text-center"
 			>
 				Our Services
 			</motion.h2>
 			<motion.div
-				className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl"
+				className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl z-10"
 				variants={containerVariants}
 				initial="hidden"
 				whileInView="show"
@@ -87,7 +32,7 @@ export default function Services() {
 				{services.map((service, i) => (
 					<motion.div
 						key={service.title || i}
-						className="bg-black/80 dark:bg-black/90 rounded-2xl p-6 flex flex-col items-center shadow-xl border border-yellow-400/30 cursor-pointer"
+						className="bg-black/50 dark:bg-black/50 rounded-2xl p-6 flex flex-col items-center shadow-xl border border-yellow-400/30 cursor-pointer"
 						variants={cardVariants}
 						whileHover={{
 							scale: 1.08,
@@ -107,7 +52,15 @@ export default function Services() {
 					</motion.div>
 				))}
 			</motion.div>
-
+			<div className="absolute inset-0 z-0 pointer-events-none">
+				<Canvas camera={{ position: [2, 4, 6], fov: 60 }}>
+					<ambientLight intensity={0.7} />
+					<directionalLight position={[5, 5, 5]} intensity={1.2} />
+					<Environment preset="sunset" />
+					<Salon3DLogo />
+					<OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5} />
+				</Canvas>
+			</div>
 			{/* Modal for service details */}
 			{selected && (
 				<motion.div
