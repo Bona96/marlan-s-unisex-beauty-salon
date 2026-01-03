@@ -2,9 +2,7 @@ import Navbar from './components/Navbar';
 import HomeSlider from './pages/HomeSlider';
 import Services from './pages/Services';
 import Gallery from './pages/Gallery';
-import Contact from './pages/Contact';
-import Footer from './pages/Footer';
-import VantaHero from './components/VantaHero';
+import { VantaCloudsHero, VantaBirdsHero } from './components/VantaHero';
 
 const App = () => {
   return (
@@ -13,11 +11,12 @@ const App = () => {
       <main>
         <HomeSlider />
         <Services />
-        <VantaHero />
+        {/* for about us */}
+        <VantaBirdsHero />
         <Gallery />
-        <Contact />
+        {/* for contact */}
+        <VantaCloudsHero />
       </main>
-      <Footer />
     </div>
   );
 };

@@ -11,25 +11,44 @@
     <script type="module" src="/src/main.tsx"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"></script>
-    <script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+    <!-- <script>
       let _strk = window._strk = window._strk || []
-      var setVanta = ()=>{
-      if (window.VANTA) window.VANTA.BIRDS({
-        el: ".s-page-1 .s-section-1 .s-section",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        backgroundColor: 0x000000,
-      })
+      var setBirdsVanta = ()=>{
+        if (window.VANTA) window.VANTA.BIRDS({
+          el: ".s-page-1 .s-section-1 .s-section",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          scale: 1.00,
+          scaleMobile: 1.00,
+          backgroundColor: 0x000000,
+        })
+      }
+      var setCloudsVanta = ()=>{
+        if (window.VANTA) window.VANTA.CLOUDS({
+          el: ".s-page-1 .s-section-1 .s-section",
+          mouseControls: true,
+          touchControls: true,
+          gyroControls: false,
+          minHeight: 200.00,
+          minWidth: 200.00,
+          // Add any custom colors or settings here
+          skyColor: 0x70a0f,
+          cloudColor: 0x53585b,
+          sunColor: 0x2e2719,
+          sunGlareColor: 0x492314,
+          sunlightColor: 0x422e1b
+        })
       }
       _strk.push(function() {
-        setVanta()
-        window.edit_page.Event.subscribe( "Page.beforeNewOneFadeIn", setVanta )
+        setBirdsVanta()
+        setCloudsVanta()
+        window.edit_page.Event.subscribe( "Page.beforeNewOneFadeIn", setBirdsVanta )
+        window.edit_page.Event.subscribe( "Page.beforeNewOneFadeIn", setCloudsVanta )
       })
-    </script>
+    </script> -->
   </body>
 </html>

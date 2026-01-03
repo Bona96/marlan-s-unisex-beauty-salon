@@ -2,7 +2,7 @@ import MarlanLogo from '../assets/images/marlan-unisex-beauty-salon-logo-white-b
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-linear-to-br from-black via-yellow-800 to-black text-gray-300 py-10 px-4 mt-16 shadow-2xl border-t border-yellow-400/20">
+    <footer className="w-full bg-linear-to-br from-black/10 via-yellow-800/40 to-black/10 text-gray-300 py-10 px-4">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
         {/* Brand & Contact */}
         <div className="flex items-center gap-5">
@@ -44,12 +44,12 @@ export default function Footer() {
       <div className="border-t border-gray-800 mt-10 pt-5 flex flex-col md:flex-row justify-between items-center">
         <span className="text-md text-yellow-400">© {new Date().getFullYear()} Marlan's Unisex Beauty Salon</span>
         <span className="text-md mt-2 md:mt-0 flex items-center gap-2">
-          Powered by
+          Powered by:
           <a
             href="https://knihtdigitalsolutions.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-cyan-700 hover:bg-cyan-800 text-white px-3 py-1 rounded-lg font-semibold transition shadow-md"
+            className="bg-linear-to-r from-cyan-500/20 via-yellow-500/50 to-cyan-500/20 hover:bg-cyan-800 text-white px-4 py-2 rounded-lg font-semibold transition shadow-md"
           >
             KNiHT Digital Solutions
           </a>
